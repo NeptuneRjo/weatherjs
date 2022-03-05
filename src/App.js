@@ -12,7 +12,7 @@ const App = () => {
   const [error, setError] = useState(null)
 
 
-  const handleFetch = (newLocation) => {
+  const handleFetch = () => {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`
     const abortCont = new AbortController();
 
