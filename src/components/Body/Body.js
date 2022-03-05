@@ -1,10 +1,9 @@
 import React from 'react';
 import './styling/body.css';
-import useFetch from '../useFetch';
 import './BodyContent/BodyContent';
 import BodyContent from './BodyContent/BodyContent';
 
-const Body = ({ location, data, isPending }) => {
+const Body = ({ data, isPending }) => {
 
   return (
     <div className="body-main gradient__border">
