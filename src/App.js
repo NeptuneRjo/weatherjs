@@ -49,7 +49,6 @@ const App = () => {
 
   useEffect(() => {
     handleFetch(location)
-    console.log(data)
   }, [location])
 
 
