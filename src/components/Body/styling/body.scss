@@ -115,10 +115,18 @@
             font-weight: 500;
            }
        }
+    }
+}
 
-    //    .humidity {
-    //        margin-top: 2rem;
-    //        grid-column: span 2;
-    //    }
+.body-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-family);
+
+    p {
+        color: white;
+        font-size: 18px;
     }
 }

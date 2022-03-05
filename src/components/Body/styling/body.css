@@ -95,4 +95,16 @@
   font-weight: 500;
 }
 
+.body-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-family);
+}
+.body-loading p {
+  color: white;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=body.css.map */
