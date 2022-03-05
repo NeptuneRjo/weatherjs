@@ -7,7 +7,9 @@ const Body = ({ data }) => {
 
   return (
     <div className="body-main gradient__border">
-      <BodyContent data={data} />
+      {data !== null && 
+        <BodyContent data={data} />
+      }
     </div>
   )
 }
