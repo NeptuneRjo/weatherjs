@@ -1,3 +1,98 @@
+.body-main {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-family);
+}
 
+.body-secondary {
+  min-height: 100vh;
+  display: grid;
+}
+.body-secondary .weather-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.body-secondary .weather-main .current-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.body-secondary .weather-main .current-temp div {
+  font-size: 32px;
+  padding: 1rem;
+  font-weight: bold;
+}
+.body-secondary .weather-main .current-temp p {
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  width: 20ch;
+  text-align: center;
+}
+.body-secondary .weather-main .weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-secondary .weather-minmax {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: fit-content;
+  background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  margin: 0 1rem;
+  border-radius: 4px;
+}
+.body-secondary .weather-minmax .min-temp, .body-secondary .weather-minmax .max-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 0;
+  color: white;
+  background: transparent;
+}
+.body-secondary .weather-minmax .min-temp div, .body-secondary .weather-minmax .max-temp div {
+  font-size: 32px;
+  padding: 1rem;
+  background: transparent;
+  font-weight: bold;
+}
+.body-secondary .weather-minmax .min-temp p, .body-secondary .weather-minmax .max-temp p {
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  width: 20ch;
+  text-align: center;
+  background: transparent;
+  font-weight: 500;
+}
+.body-secondary .weather-other {
+  display: grid;
+  height: fit-content;
+  padding: 1rem 0;
+  color: white;
+  gap: 15px;
+}
+.body-secondary .weather-other .pressure, .body-secondary .weather-other .wind-speed, .body-secondary .weather-other .humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  padding: 1rem 0;
+}
+.body-secondary .weather-other .pressure div, .body-secondary .weather-other .wind-speed div, .body-secondary .weather-other .humidity div {
+  font-size: 18px;
+  padding: 0.5rem 0;
+  background: transparent;
+  font-weight: bold;
+}
+.body-secondary .weather-other .pressure p, .body-secondary .weather-other .wind-speed p, .body-secondary .weather-other .humidity p {
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  width: 20ch;
+  text-align: center;
+  background: transparent;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=body.css.map */
