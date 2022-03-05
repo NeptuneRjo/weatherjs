@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import Body from './components/Body/Body';
 import Header from './components/Header/Header';
+import useFetch from './components/useFetch';
+
 
 const App = () => {
-  const link = "http://api.openweathermap.org/data/2.5/weather?q=${locationToUse}&APPID={process.env.REACT_APP_CHEC_PUBLIC_KEY}"
 
   const [location, setLocation] = useState('Tampa');
+  const {data, isPending, error} = useFetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`)
 
   const handleLocation = (userLocation) => {
     const newLocation = userLocation;
@@ -16,7 +18,7 @@ const App = () => {
   return (
     <div className="app">
         <Header handleLocation={handleLocation}/>
-        <Body location={location}/>
+        <Body location={location} data={data} isPending={isPending}/>
     </div>
   )
 }
