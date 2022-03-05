@@ -5,15 +5,15 @@ import Header from './components/Header/Header';
 
 const App = () => {
 
-  const [location, setLocation] = useState('Tampa');
+  const [defaultLocation, setDefaultLocation] = useState('Tampa');
 
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null)
 
 
-  const handleFetch = async () => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`
+  const handleFetch = async (newLocation) => {
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${newLocation}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`
     const abortCont = new AbortController();
 
     fetch(url, { signal: abortCont.signal })
@@ -44,17 +44,17 @@ const App = () => {
   const handleLocation = (userLocation) => {
     const newLocation = userLocation;
 
-    setLocation(newLocation);
+    handleFetch(newLocation);
   }
 
   useEffect(() => {
-    handleFetch(location)
-  }, [location])
+    handleFetch(defaultLocation);
+  }, [])
 
 
   return (
     <div className="app">
-        <Header handleLocation={handleLocation}/>
+        <Header handleLocation={handleLocation} />
         {isPending &&
           <div className="body-loading">
             <p>Loading...</p>
