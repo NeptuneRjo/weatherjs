@@ -12,7 +12,7 @@ const App = () => {
   const [error, setError] = useState(null)
 
 
-  const handleFetch = () => {
+  const handleFetch = async () => {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`
     const abortCont = new AbortController();
 
@@ -49,13 +49,19 @@ const App = () => {
 
   useEffect(() => {
     handleFetch(location)
+    console.log(data)
   }, [location])
 
 
   return (
     <div className="app">
         <Header handleLocation={handleLocation}/>
-        <Body data={data} isPending={isPending} />
+        {isPending &&
+          <div className="body-loading">
+            <p>Loading...</p>
+          </div>
+        }
+        <Body data={data} />
     </div>
   )
 }
