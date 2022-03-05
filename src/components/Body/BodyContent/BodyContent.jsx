@@ -28,16 +28,16 @@ const BodyContent = ({ data }) => {
             </div>
             <div className="weather-other">
                 <div className="pressure">
-                <div>{data.main.pressure}mb</div>
-                <p>pressure</p>
+                    <div>{data.main.pressure}mb</div>
+                    <p>pressure</p>
                 </div>
                 <div className="wind-speed">
-                <div>{data.wind.speed}mp/h</div>
-                <p>wind speed</p>
+                    <div>{data.wind.speed}mp/h</div>
+                    <p>wind speed</p>
                 </div>
                 <div className="humidity">
-                <div>{data.main.humidity}%</div>
-                <p>humidity</p>
+                    <div>{data.main.humidity}%</div>
+                    <p>humidity</p>
                 </div>
             </div>
             </div>
