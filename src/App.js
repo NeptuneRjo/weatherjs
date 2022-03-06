@@ -13,7 +13,7 @@ const App = () => {
 
 
   const handleFetch = async (newLocation) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${newLocation}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${newLocation}&APPID=${process.env.REACT_APP_PUBLIC_KEY}`
     const abortCont = new AbortController();
 
     fetch(url, { signal: abortCont.signal })
@@ -45,10 +45,20 @@ const App = () => {
     const newLocation = userLocation;
 
     handleFetch(newLocation);
+    handleSessionDefault(newLocation);
+  }
+
+  const handleSessionDefault = (newDefault) => {
+    window.sessionStorage.setItem('location', newDefault);
   }
 
   useEffect(() => {
-    handleFetch(defaultLocation);
+    if (window.sessionStorage.getItem('location') !== 'undefined') {
+      handleFetch(window.sessionStorage.getItem('location'));
+      return;
+    }
+
+    handleFetch(defaultLocation)
   }, [])
 
 
