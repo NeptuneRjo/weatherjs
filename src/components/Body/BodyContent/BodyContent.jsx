@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styling/body.css'
 
 const BodyContent = ({ data }) => {
@@ -32,7 +32,7 @@ const BodyContent = ({ data }) => {
                     <p>pressure</p>
                 </div>
                 <div className="wind-speed">
-                    <div>{data.wind.speed}mp/h</div>
+                    <div>{(data.wind.speed).toFixed(0)} mp/h</div>
                     <p>wind speed</p>
                 </div>
                 <div className="humidity">
