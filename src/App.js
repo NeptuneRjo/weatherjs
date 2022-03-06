@@ -53,7 +53,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (window.sessionStorage.getItem('location') !== 'undefined') {
+    if (window.sessionStorage.getItem('location') !== null) {
       handleFetch(window.sessionStorage.getItem('location'));
       return;
     }
