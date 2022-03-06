@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './styling/header.css';
 
 const Header = ({ handleLocation }) => {
 
   const handleSubmit = (event) => {
-    const userLocation = document.getElementById('input-location').value
+    const userInput = document.getElementById('input-location')
     event.preventDefault();
-
-    handleLocation(userLocation);
+    
+    handleLocation(userInput.value);
+    userInput.value = '';
   }
 
   return (
