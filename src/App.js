@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Body from './components/Body/Body';
 import Header from './components/Header/Header';
+import './App.css'
 
 
 const App = () => {
@@ -62,14 +63,16 @@ const App = () => {
   }, [])
 
 
+  if (isPending) {
+    return (
+      <div className="body-loading">
+        <p>Loading...</p>
+      </div>
+    )
+  }
   return (
     <div className="app">
         <Header handleLocation={handleLocation} />
-        {isPending &&
-          <div className="body-loading">
-            <p>Loading...</p>
-          </div>
-        }
         <Body data={data} />
     </div>
   )

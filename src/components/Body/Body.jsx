@@ -1,29 +1,34 @@
 import React from 'react'
-import '../styling/body.css'
+import './styling/body.css'
 
 const BodyContent = ({ data }) => {
 
-    const handleKelToFah = (kelvin) => (
+    const kelvinToFarenheit = (kelvin) => (
         ((kelvin - 273.15) * (9/5) + 32).toFixed(0)
     );
 
     return (
-        <div className="body-secondary">
+        <div className="body-main">
             <div className="weather-main">
                 <div className="current-temp">
-                <div>{handleKelToFah(data.main.temp)}°f</div>
-                <p>Current Temperature in {data.name}</p>
+                    <div>{kelvinToFarenheit(data.main.temp)}°f</div>
+                    <p>{data.name}</p>
                 </div>
-                <div className="weather-icon"><img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} /><p>{data.weather[0].description}</p></div>
+                <div className="weather-icon">
+                    <img 
+                        src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
+                    />
+                    <p>{data.weather[0].description}</p>
+                </div>
             </div>
             <div className="weather-minmax">
                 <div className="min-temp">
-                <div>{handleKelToFah(data.main.temp_min)}°f</div>
-                <p>Min. Temp</p>
+                    <div>{kelvinToFarenheit(data.main.temp_min)}°f</div>
+                    <p>Low</p>
                 </div>
                 <div className="max-temp">
-                <div>{handleKelToFah(data.main.temp_max)}°f</div>
-                <p>Max. Temp</p>
+                    <div>{kelvinToFarenheit(data.main.temp_max)}°f</div>
+                    <p>High</p>
                 </div>
             </div>
             <div className="weather-other">
@@ -40,7 +45,7 @@ const BodyContent = ({ data }) => {
                     <p>humidity</p>
                 </div>
             </div>
-            </div>
+        </div>
     )
 }
 
