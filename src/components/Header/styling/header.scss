@@ -46,7 +46,7 @@
 
         input {
             color: white;
-            border: solid 2px var(--gray-white);
+            border: solid 2px var(--background-color);
             padding: .5rem 2rem;
             padding-left: .75rem;
             outline: none;
@@ -54,7 +54,7 @@
 
         input:focus {
             outline: none !important;
-            border: solid 2px var(--light-green);
+            border: solid 2px var(--off-white);
           }
     }
 }

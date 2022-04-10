@@ -41,14 +41,14 @@
 }
 .header-secondary .header-search input {
   color: white;
-  border: solid 2px var(--gray-white);
+  border: solid 2px var(--background-color);
   padding: 0.5rem 2rem;
   padding-left: 0.75rem;
   outline: none;
 }
 .header-secondary .header-search input:focus {
   outline: none !important;
-  border: solid 2px var(--light-green);
+  border: solid 2px var(--off-white);
 }
 
 /*# sourceMappingURL=header.css.map */
