@@ -2,10 +2,16 @@
 
 :root {
     --font-family: 'Ubuntu', sans-serif;
+
+    --background-color: #17252a;
+    --dark-green: #2b7a78;
+    --light-green: #3aafa9;
+    --gray-white: #def2f1;
+    --off-white: #feffff;
 }
 
 * {
     margin: 0;
     padding: 0;
-    background: rgb(22, 22, 22);
+    background: var(--background-color);
 }
