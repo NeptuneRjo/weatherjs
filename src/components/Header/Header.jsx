@@ -21,7 +21,10 @@ const Header = ({ handleLocation }) => {
           <h2>WeatherJS</h2>
         </div>
         <div className="header-search">
-          <form onSubmit={(event) => {handleSubmit(event)}}>
+          <form 
+            onSubmit={(event) => {handleSubmit(event)}} 
+            data-testid='form'
+          >
             <input 
               type="text" 
               name="location" 
