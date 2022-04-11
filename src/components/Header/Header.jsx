@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './styling/header.css';
 
 const Header = ({ handleLocation }) => {
+
+  const [location, setLocation] = useState('')
 
   const handleSubmit = (event) => {
     const userInput = document.getElementById('input-location')
@@ -9,6 +11,7 @@ const Header = ({ handleLocation }) => {
     
     handleLocation(userInput.value);
     userInput.value = '';
+    setLocation('')
   }
 
   return (
@@ -24,6 +27,9 @@ const Header = ({ handleLocation }) => {
               name="location" 
               id="input-location" 
               placeholder='Enter a town/city' 
+              data-testid='input-location'
+              value={location}
+              onChange={(e) => {setLocation(e.target.value)}}
             />
           </form>
         </div>
