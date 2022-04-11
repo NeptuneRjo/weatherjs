@@ -3,13 +3,11 @@
 :root {
     --font-family: 'Ubuntu', sans-serif;
 
-    --background-color: #17252A;
-    --dark-green: #2b8a7a;
+    --background-color: #17252a;
+    --dark-green: #2b7a78;
     --light-green: #3aafa9;
     --gray-white: #def2f1;
     --off-white: #feffff;
-
-    --gradient: linear-gradient(to right, #3aafa9, #36a69d, #329c91, #2e9385, #2b8a7a);
 }
 
 * {

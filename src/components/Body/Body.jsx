@@ -15,9 +15,7 @@ const BodyContent = ({ data }) => {
                     <p>{data.name}</p>
                 </div>
                 <div className="weather-icon">
-                    <img 
-                        src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
-                    />
+                    <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
                     <p>{data.weather[0].description}</p>
                 </div>
             </div>

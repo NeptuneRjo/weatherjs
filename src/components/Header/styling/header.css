@@ -1,25 +1,17 @@
 .header-main {
-  color: var(--gray-white);
+  color: var(--off-white);
   font-family: var(--font-family);
-  padding-bottom: 2px;
-  background: var(--dark-green);
-  border-radius: 8px;
-  max-width: 400px;
   width: 100%;
 }
 
-.gradient__bottom {
-  background-image: var(--gradient);
-}
-
-.header-secondary {
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   background: transparent;
 }
-.header-secondary .header-logo {
+.header-content .header-logo {
   width: 25%;
   display: flex;
   justify-content: center;
@@ -28,10 +20,10 @@
   padding: 1rem;
   background: transparent;
 }
-.header-secondary .header-logo h2 {
+.header-content .header-logo h2 {
   background: transparent;
 }
-.header-secondary .header-search {
+.header-content .header-search {
   width: 100%;
   display: flex;
   align-items: center;
@@ -39,16 +31,16 @@
   margin-bottom: 3rem;
   background: transparent;
 }
-.header-secondary .header-search input {
+.header-content .header-search input {
   color: white;
-  border: solid 2px var(--background-color);
+  border: solid 2px var(--gray-white);
   padding: 0.5rem 2rem;
   padding-left: 0.75rem;
   outline: none;
 }
-.header-secondary .header-search input:focus {
+.header-content .header-search input:focus {
   outline: none !important;
-  border: solid 2px var(--off-white);
+  border: solid 2px var(--light-green);
 }
 
 /*# sourceMappingURL=header.css.map */

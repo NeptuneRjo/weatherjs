@@ -12,8 +12,8 @@ const Header = ({ handleLocation }) => {
   }
 
   return (
-    <div className="header-main gradient__bottom">
-      <div className="header-secondary">
+    <div className="header-main">
+      <div className="header-content">
         <div className="header-logo">
           <h2>WeatherJS</h2>
         </div>

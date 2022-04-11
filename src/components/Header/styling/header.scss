@@ -1,20 +1,10 @@
 .header-main {
-    color: var(--gray-white);
+    color: var(--off-white);
     font-family: var(--font-family);
-
-    padding-bottom: 2px;
-    background: var(--dark-green);
-    border-radius: 8px;
-    max-width: 400px;
     width: 100%;
 }
 
-.gradient__bottom {
-    background-image: var(--gradient);
-
-}
-
-.header-secondary {
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +36,7 @@
 
         input {
             color: white;
-            border: solid 2px var(--background-color);
+            border: solid 2px var(--gray-white);
             padding: .5rem 2rem;
             padding-left: .75rem;
             outline: none;
@@ -54,7 +44,7 @@
 
         input:focus {
             outline: none !important;
-            border: solid 2px var(--off-white);
+            border: solid 2px var(--light-green);
           }
     }
 }
