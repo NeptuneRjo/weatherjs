@@ -11,35 +11,52 @@ const BodyContent = ({ data }) => {
         <div className="body-main">
             <div className="weather-main">
                 <div className="current-temp">
-                    <div>{kelvinToFarenheit(data.main.temp)}°f</div>
-                    <p>{data.name}</p>
+                    <div data-testid='temperature'>
+                        {kelvinToFarenheit(data.main.temp)}°f
+                    </div>
+                    <p data-testid='location-name'>{data.name}</p>
                 </div>
                 <div className="weather-icon">
-                    <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} />
-                    <p>{data.weather[0].description}</p>
+                    <img 
+                        src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
+                        data-testid='weather-icon'
+                    />
+                    <p data-testid='weather-description'>
+                        {data.weather[0].description}
+                    </p>
                 </div>
             </div>
             <div className="weather-minmax">
                 <div className="min-temp">
-                    <div>{kelvinToFarenheit(data.main.temp_min)}°f</div>
+                    <div data-testid='weather-low'>
+                        {kelvinToFarenheit(data.main.temp_min)}°f
+                    </div>
                     <p>Low</p>
                 </div>
                 <div className="max-temp">
-                    <div>{kelvinToFarenheit(data.main.temp_max)}°f</div>
+                    <div data-testid='weather-high'> 
+                        {kelvinToFarenheit(data.main.temp_max)}°f
+                    </div>
                     <p>High</p>
                 </div>
             </div>
             <div className="weather-other">
                 <div className="pressure">
-                    <div>{data.main.pressure}mb</div>
+                    <div data-testid='weather-pressure'>
+                        {data.main.pressure}mb
+                    </div>
                     <p>pressure</p>
                 </div>
                 <div className="wind-speed">
-                    <div>{(data.wind.speed).toFixed(0)} mp/h</div>
+                    <div data-testid='weather-wind'>
+                        {(data.wind.speed).toFixed(0)} mp/h
+                    </div>
                     <p>wind speed</p>
                 </div>
                 <div className="humidity">
-                    <div>{data.main.humidity}%</div>
+                    <div data-testid='weather-humidity'>
+                        {data.main.humidity}%
+                    </div>
                     <p>humidity</p>
                 </div>
             </div>
