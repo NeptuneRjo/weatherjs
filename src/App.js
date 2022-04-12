@@ -3,6 +3,8 @@ import Body from './components/Body/Body';
 import Header from './components/Header/Header';
 import './App.css';
 
+import Spinner from './components/Spinner/Spinner';
+
 
 const App = () => {
 
@@ -65,7 +67,7 @@ const App = () => {
   if (isPending) {
     return (
       <div className="app-loading">
-        <p>Loading...</p>
+        <Spinner customText='Loading...' />
       </div>
     )
   }
