@@ -1,0 +1,46 @@
+.header-main {
+  color: var(--off-white);
+  font-family: var(--font-family);
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+}
+.header-content .header-logo {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  padding: 1rem;
+  background: transparent;
+}
+.header-content .header-logo h2 {
+  background: transparent;
+}
+.header-content .header-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  background: transparent;
+}
+.header-content .header-search input {
+  color: white;
+  border: solid 2px var(--gray-white);
+  padding: 0.5rem 2rem;
+  padding-left: 0.75rem;
+  outline: none;
+}
+.header-content .header-search input:focus {
+  outline: none !important;
+  border: solid 2px var(--light-green);
+}
+
+/*# sourceMappingURL=header.css.map */

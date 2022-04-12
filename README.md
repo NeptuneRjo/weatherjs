@@ -28,6 +28,7 @@ It displays the current temperature, the weather, the highs and lows for the day
 ## Technologies
 
 Built using `html`, `css`, `React`, and `OpenWeather API`.
+Tested with `React-Testing-Library` and `Jest`.
 
 
 ## Setup

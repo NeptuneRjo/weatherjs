@@ -1,0 +1,107 @@
+.body-main {
+  display: flex;
+  flex-direction: column;
+  color: var(--off-white);
+  font-family: var(--font-family);
+  max-width: 765px;
+  width: 100%;
+}
+
+.weather-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: bold;
+  margin: 3rem 0;
+}
+.weather-main .current-temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.1em;
+}
+.weather-main .current-temp p {
+  padding: 5px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+.weather-main .weather-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.weather-main .weather-icon p {
+  padding: 5px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.weather-minmax {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 3rem 0;
+}
+.weather-minmax .min-temp div, .weather-minmax .min-temp p {
+  padding: 5px;
+}
+.weather-minmax .min-temp div {
+  font-weight: bold;
+}
+.weather-minmax .min-temp p {
+  opacity: 0.8;
+}
+.weather-minmax .max-temp div, .weather-minmax .max-temp p {
+  padding: 5px;
+}
+.weather-minmax .max-temp div {
+  font-weight: bold;
+}
+.weather-minmax .max-temp p {
+  opacity: 0.8;
+}
+
+.weather-other {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 3rem 0;
+}
+.weather-other .pressure {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.weather-other .pressure p {
+  padding: 5px;
+}
+.weather-other .humidity {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.weather-other .humidity p {
+  padding: 5px;
+}
+.weather-other .wind-speed {
+  grid-column: 1/5;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.weather-other .wind-speed p {
+  padding: 5px;
+}
+
+/*# sourceMappingURL=body.css.map */

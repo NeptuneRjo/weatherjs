@@ -1,5 +1,6 @@
 {
   "files": {
+<<<<<<< HEAD
     "main.css": "/weatherjs/static/css/main.b099bc0e.css",
     "main.js": "/weatherjs/static/js/main.724a3a6b.js",
     "index.html": "/weatherjs/index.html",
@@ -9,5 +10,16 @@
   "entrypoints": [
     "static/css/main.b099bc0e.css",
     "static/js/main.724a3a6b.js"
+=======
+    "main.css": "/weatherjs/static/css/main.1526df29.css",
+    "main.js": "/weatherjs/static/js/main.353bf378.js",
+    "index.html": "/weatherjs/index.html",
+    "main.1526df29.css.map": "/weatherjs/static/css/main.1526df29.css.map",
+    "main.353bf378.js.map": "/weatherjs/static/js/main.353bf378.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1526df29.css",
+    "static/js/main.353bf378.js"
+>>>>>>> main
   ]
 }
