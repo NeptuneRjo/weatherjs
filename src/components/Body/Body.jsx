@@ -20,6 +20,7 @@ const BodyContent = ({ data }) => {
                     <img 
                         src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} 
                         data-testid='weather-icon'
+                        alt='Icon of the current weather'
                     />
                     <p data-testid='weather-description'>
                         {data.weather[0].description}
